@@ -1,0 +1,32 @@
+﻿@model SocialPoster.Models.Profile
+@{
+    ViewBag.Title = "Profile";
+}
+<style>
+    .spacingDiv {
+        margin-bottom: 15px;
+    }
+</style>
+<div class="row">
+    <div class="col-md-8">
+        <h2>Profile</h2>
+        <hr />
+        <div class="form-group">
+            @Html.LabelFor(m => m.UserName, new {  @class = "col-md-2" })
+            <div class="col-md-10 spacingDiv">
+                @Html.TextBoxFor(m => m.UserName, new { disabled = "disabled", @class = "form-control" })
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(m => m.Email, new { @class = "col-md-2" })
+            <div class="col-md-10 spacingDiv">
+                @Html.TextBoxFor(m => m.Email, new { @class = "form-control" })
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" class="btn btn-default" value="Update" />
+            </div>
+        </div>
+    </div>
+    </div>
